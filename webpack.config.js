@@ -33,7 +33,10 @@ const config = {
 			hash: true,
 			filename: 'index.html',
 			inject: 'body'
-		})
+		}),
+		new CopyWebpackPlugin([
+			{from : 'public'}
+		])
 	],
 	devtool: "source-map"
 };

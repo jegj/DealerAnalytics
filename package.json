@@ -3,7 +3,8 @@
 	"version": "0.1.0",
 	"description": "Sample of login/main for dealerworks dashboard",
 	"scripts": {
-		"start": "webpack-dev-server"
+		"start": "webpack-dev-server",
+		"build": "webpack"
 	},
 	"homepage": "https://github.com/jegj/DealerAnalytics",
 	"repository": "https://github.com/jegj/DealerAnalytics",
