@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>ElectronIframe</title>
+		<title>DealerAnalytics</title>
 		<link rel="stylesheet" href="css/bootstrap.min.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
@@ -12,16 +12,16 @@
 				<div class="col-md-4"></div>
 				<div class="col-md-4">
 					<section class="login-form">
-						<form method="post" action="#" role="login">
-							<img src="http://i.imgur.com/RcmcLv4.png" class="img-responsive" alt="" />
+						<div id="spinner" class="loading">Loading&#8230;</div>
+						<form method="post" action="#" role="login" id="login">
+							<img src="/images/logo.png" width="120px" height="120px" class="img-responsive" alt="DealerAnalytics" />
 							<input type="email" name="email" placeholder="Email" required class="form-control input-lg" value="" />
 							<input type="password" class="form-control input-lg" id="password" placeholder="Password" required="" />
 							<div class="pwstrength_viewport_progress"></div>
-							<button type="submit" name="go" class="btn btn-lg btn-primary btn-block">Sign in</button>
+							<button id="loginBtn" type="submit" name="go" class="btn btn-lg btn-primary btn-block">Sign in</button>
 							<div>
 								<a href="#">Create account</a> or <a href="#">reset password</a>
 							</div>
-							
 						</form>
 					</section>  
 					</div>
