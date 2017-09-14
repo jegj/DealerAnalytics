@@ -1,10 +1,10 @@
 window.onmessage = function(e){
+	console.log(e);
 	if (e && e.data ) {
-		const data = e.data;
-		if ( data.type == 'electron-pipe-auth') {
-			const electrondata = JSON.parse(data.data);
+		const electrondata = JSON.parse(e.data);
+		if ( electrondata.type == 'electron-pipe-auth') {
 			if ( electrondata.code === 'JWT') {
-				pipeAuthentication(electrondata.JWT);
+				pipeAuthentication(electrondata.data.JWT);
 			}
 		}
 	}
@@ -23,6 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function pipeAuthentication(jwt) {
+	const data = decodeJWT(jwt);
+	const sdata = JSON.stringify(data)
+	localStorage.setItem('user', sdata);
 	activateSpinner();
 	setTimeout(function() {
 		desactivateSpinner()
@@ -44,4 +47,5 @@ function decodeJWT(jwt) {
 	const base64Url = jwt.split('.')[1];
 	const base64 = base64Url.replace('-', '+').replace('_', '/');
 	const payload = JSON.parse(window.atob(base64));
+	return payload;
 }

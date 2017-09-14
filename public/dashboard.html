@@ -53,9 +53,23 @@
 			<div class="starter-template">
 				<h1>Dashboard Main Page</h1>
 				<p class="lead">
-					Login as  <b></b>
+					Login as  <b id="user"></b>
 				</p>
+				<p>
+					Roles:
+				</p>
+				<ul id="list">
+					<li><b>0:0:0(super)</b></li>
+				</ul>
 			</div>
 		</div>
 	</body>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const sdata = localStorage.getItem('user')
+			const data = JSON.parse(sdata);
+			const userDom = document.querySelector('#user');
+			userDom.innerHTML = data.name;
+		});
+	</script>
 </html>

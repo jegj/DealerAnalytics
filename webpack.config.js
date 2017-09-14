@@ -4,9 +4,6 @@ HtmlWebpackPlugin = require('html-webpack-plugin'),
 CopyWebpackPlugin = require('copy-webpack-plugin')
 fs = require('fs');
 
-/* babel */
-// const babelSettings = JSON.parse(fs.readFileSync(".babelrc"));
-
 const config = {
 	entry:{
 		app:'./src/main.js'
