@@ -101,7 +101,7 @@ function pipeAuthentication(jwt) {
 	activateSpinner();
 	setTimeout(function() {
 		desactivateSpinner()
-		window.location.href= '/dashboard.html';
+		window.location.href= 'dashboard.html';
 	}, 1500);
 }
 
